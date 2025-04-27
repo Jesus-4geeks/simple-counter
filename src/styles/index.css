@@ -9,3 +9,7 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+.card-title {
+    font-size: 3rem;
+}
