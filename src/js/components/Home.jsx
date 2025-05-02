@@ -18,7 +18,6 @@ const Home = (props) => {
 			});
         }, 1000);
 
-        // Limpiar el intervalo cuando el componente se desmonte
         return () => clearInterval(interval);
     }, []);
 
