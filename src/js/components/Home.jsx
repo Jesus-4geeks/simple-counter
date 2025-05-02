@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import Card from "./Card";
 
 //create your first component
-const Home = () => {
-    const [seconds, setSeconds] = useState(0);
+const Home = (props) => {
+    const [seconds, setSeconds] = useState(parseInt(props.seconds));
 
 	// Configures the setInterval function for the increment of the number
     useEffect(() => {
