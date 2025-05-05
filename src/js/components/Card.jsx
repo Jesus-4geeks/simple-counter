@@ -1,17 +1,17 @@
 const Card = (props) => {
-    const clockIcon = <i class="fa-solid fa-clock"></i>;
-    let title = props.title;
+    const clockIcon = <i className="fa-solid fa-clock"></i>;
+    let value = props.value;
     let margin = "mx-2";
 
-    if (title === 'clock') {
-        title = clockIcon;
+    if (value === 'clock') {
+        value = clockIcon;
         margin = "mx-5";
     }
 
     return (
         <div className={`card bg-dark ${margin} text-center`}>
             <div className="card-body text-white">
-                <h5 className="card-title">{title}</h5>
+                <h5 className="card-value">{value}</h5>
             </div>
         </div>
     );

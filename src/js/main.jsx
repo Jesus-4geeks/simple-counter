@@ -11,8 +11,23 @@ import '../styles/index.css'
 // components
 import Home from './components/Home';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+let seconds = 0;
+setInterval(() => {
+  seconds += 1;
+  
+  // In case the counter overflows
+  if (seconds >= 999_999) {
+      seconds = 0;
+  }
+
+  // Forces re-render
+  root.render(<Home seconds={seconds} />);
+}, 1000);
+
+root.render(
   <React.StrictMode>
-    <Home seconds="0" />
+    <Home seconds={seconds} />
   </React.StrictMode>,
 )
