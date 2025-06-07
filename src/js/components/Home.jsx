@@ -10,7 +10,7 @@ const Home = ({ seconds }) => {
             <Card value="clock" />
 
             {digits.map((digit, index) => (
-                <Card key="index" value={digit} />
+                <Card key={index} value={digit} />
             ))}
         </div>
     );
